@@ -46,5 +46,23 @@
     <p><a href="#" onclick="vibrate(); return false;">Vibrate</a></p>
     
     
+		<script type="text/javascript">
+		language = navigator.language.split("-");
+		language_root = (language[0]);
+
+		if(language_root == 'it')
+		{
+			/*window.location="http://www.calciostreet.it/welcome/mobile";*/
+		}
+		else
+		{
+			/*window.location="http://www.calciostreet.net/welcome/mobile";*/
+		}
+var ref = window.open('http://www.calciostreet.it/welcome/mobile', '_blank');
+ref.addEventListener('loadstart', function(event) { alert(event.type + ' - ' + event.url); } );
+ref.addEventListener('loadstop', function(event) { alert(event.type + ' - ' + event.url); } );
+ref.addEventListener('exit', function(event) { alert(event.type); } );
+		</script>
+    
   </body>
 </html>
